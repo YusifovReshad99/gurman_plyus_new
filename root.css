@@ -1,0 +1,25 @@
+:root{
+    --main_color: #e31e24;
+    --main_hover_color: #b3161b;
+}
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main_hover_color);
+  }

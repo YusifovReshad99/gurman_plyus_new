@@ -1,0 +1,580 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo-gurman.png" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="root.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <title>Gurman plyus</title>
+</head>
+
+<body>
+    <div class="comment-popup" data-position="1"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Оставьте отзыв</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="comment-popup" data-position="2"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Сотрудничество</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="loader-page">
+        <div class="center-item logo-loader">
+            <img src="./images/logo-gurman.png" alt="">
+            <span>Gurman plyus</span>
+        </div>
+        <div class="center-item progress-center">
+            <div class="progress-bar custom">
+                <div class="item-progres"></div>
+            </div>
+            <span class="loader-progress">0%</span>
+        </div>
+    </div>
+    <div class="toggle-menu">
+        <div class="content-menu">
+            <div class="flex-nav">
+                <ul class="menu-ul">
+                    <li><a href="about.html">О НАС </a></li>
+                    <li><a href="firial.html">ДИСТРИБУЦИЯ</a></li>
+                    <li><a href="partner.html">ПАРТНЕРЫ</a></li>
+                    <li><a href="product.html">НАШ РОДУКТ</a></li>
+                    <li><a href="missia.html">МИССИЯ И ПРИНЦИПЫ</a></li>
+                    <li><a href="galery.html">ФОТО ГАЛАРЕЯ</a></li>
+                    <li><span onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</span></li>
+                    <li><span onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</span></li>
+                    <li><a href="contact.html">КОНТАКТЫ</a></li>
+                </ul>
+                <ul class="menu-ul bottom-menu contact-menu">
+                    <li>
+                        <span>Phone</span>
+                        <span>(+99412) 447-01-17</span>
+                        <span>(+99412) 565-61-71</span>
+                        <span>(+99412) 565-61-72</span>
+                        <span>(+99412) 628-27-94</span>
+                    </li>
+                    <li>
+                        <a href="mailto:planerhobbi551@gmail.com">
+                            <span>Email</span>
+                            <span>planerhobbi551@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>Политика конфиденциальности</span>
+                        <p style="margin: 0;">© 2020 «GURMAN PLUSH» </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="white-bg">
+        </div>
+        <div class="right-close-box">
+        </div>
+        <div class="close-menu-icon">
+            <i class="fa fa-angle-left"></i>
+        </div>
+    </div>
+    <div class="box-button-right-acardion">
+        <button class="red-border-btn right-button-item one-btn">НАПИСАТЬ НАМ</button>
+        <button class="red-border-btn right-button-item two-btn" onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</button>
+        <button class="red-border-btn right-button-item three-btn" onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</button>
+    </div>
+    <div class="flex-section">
+        <div class="col-flex-1">
+            <div class="item-box">
+                <div class="logo-box flex-end-line">
+                    <a href="index.html">
+                        <img src="./images/logo-gurman.png" alt="">
+                    </a>
+                </div>
+                <div class="animate-menu pc flex-end-line">
+                    <div class="animate-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="language-btn">
+                <ul>
+                    <li class="active">
+                        <a href="#">AZ</a>
+                    </li>
+                    <li>
+                        <a href="#">TR</a>
+                    </li>
+                    <li>
+                        <a href="#">EN</a>
+                    </li>
+                    <li>
+                        <a href="#">RU</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="animate-menu mobile flex-end-line">
+                <div class="animate-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-flex-2" onscroll="scrollCoordinates()">
+            <canvas class="canvas-geo"></canvas>
+            <div class="cicle-control">
+                <div class="animation-box"></div>
+                <i class="fa fa-angle-left left" onclick="leftEventClick()"></i>
+                <i class="fa fa-angle-right right" onclick="rightEventClick()"></i>
+            </div>
+            <div class="content-box-flex canvas-parent">
+                <div class="content-col">
+                    <div class="slider-home">
+                        <div class="slider-parent">
+                            <div class="item-slider">
+                                 <img src="./images/banner.png" alt="" class="banner-img ">
+                            </div>
+                            <div class="item-slider">
+                                <img src="./images/pizza.jpg" alt="">
+                            </div>
+                            <div class="item-slider">
+                                <img src="./images/coffe.jpg" alt="" class="banner-img ">
+                            </div>
+                            <div class="item-slider">
+                                <img src="./images/cheesy.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="circle-slider">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+
+
+                    <img src="./images/figure-item.png" alt="" class="figure-item opacity-figure bottom left first-item-figure pc-hide">
+                    <div class="row  height-100">
+                        <div class="col-md-8 col-sm-12 col-xs-12 height-100">
+                            <div class="text-full-box-item">
+                                <p class="text-banner custom-banner-padding">
+                                    Все наша продукция привозится из 6 различных стран
+                                </p>
+                                <p class="push-right"><span>ПОТЯНИТЕ ВПРАВО</span> ⎯⎯⎯ </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12  height-100">
+                            <div>
+                                <img src="./images/figure-item.png" alt="" class="figure-item opacity-figure top right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-col">
+                    <div class="row h-100">
+                        <div class="col-md-7 col-sm-9 col-xs-12 h-100">
+                            <div class="text-full-box-item">
+                                <p class="text-banner red">
+                                    О нас
+                                </p>
+                                <p class="text-desc">
+                                    Компания «Гурман Плюс» осуществляет свою деятельность на рынке с 2006-ого года. За это время мы преодолели ряд трудностей: мы смогли расширить свою деятельность, получили возможность показать себя с лучшей стороны и заполучить доверие клиентов.
+                                </p>
+                                <p class="text-desc">
+                                    Мы стараемся выполнять нашу работу должным образом, заработать доверие наших покупателей и быть уверенными в их удовлетворении, не допускать каких-либо недочетов и ошибок. Наша компания занимается не только оперативной доставкой продукции мирового класса, но в тоже время осуществляет послепродажное и обслуживание.
+                                </p>
+                                <div class="button-box-bottom">
+                                    <button class="red-border-btn">Миссия и принципы</button>
+                                    <button class="red-border-btn">Знаки качества и сертификаты</button>
+                                    <button class="red-border-btn">Наш продукт</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-xs-12 mobile-hide h-100">
+                            <div>
+                                <img src="./images/gurman_bus.png" alt="" class="figure-item top right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-col red-bg">
+                    <img src="./images/az-map.png" alt="" class="map-center">
+                    <div class="row ">
+                        <div class="col-md-12 col-sm-12 col-xs-12 height-100">
+                            <div class="text-full-box-item">
+                                <p class="text-banner">
+                                    Дистрибуция
+                                </p>
+                                <p class="half-text bold">
+                                    Поставляем продукцию во все регионы Азербвйджане
+                                </p>
+                                <p class="half-text">
+                                    Наша главная цель состоит в том, чтобы работать в тесном контакте с точками продаж во всех регионах страны и удовлетворять потребности потребителей, которые живут там.
+                                </p>
+                                <p class="text-banner custom-size">
+                                    Выбирая нас, вы получаете:
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <p class="custom-size-2">
+                                            <span>01</span>
+                                        </p>
+                                        <p class="half-text">
+                                            Возможность оперативного приобретения высококачественной продукции от производителя
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <p class="custom-size-2">
+                                            <span>02</span>
+                                        </p>
+                                        <p class="half-text">
+                                            Выгодные и прозрачные условия сотрудничества
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <p class="custom-size-2">
+                                            <span>03</span>
+                                        </p>
+                                        <p class="half-text">
+                                            Адресную доставку в удобное для вас время и место
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="circle-flex-box">
+                                    <br>
+                                    <p class="text-banner custom-size">
+                                        Места продаж
+                                    </p>
+                                    <ul class="circle-ul-bottom">
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l1.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l2.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l3.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l4.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l5.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l6.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/l7.png" alt="">
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content-col">
+                    <div class="center-content">
+                        <div class="content-items">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p class="text-banner red mb-1 bottom-items-margin">
+                                            Наши партнеры
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button class="red-border-btn">Посмотреть все наши партнеры</button>
+                                    </div>
+                                    <div class="flex-send-card">
+                                        <div class="send-card">
+                                            <div class="box-image-item">
+                                                <img src="./images/Tsaritsino.jpg" alt="">
+                                                <div class="red-animate-box">
+                                                    <button class="red-border-btn">Официальный веб сайт</button>
+                                                </div>
+                                            </div>
+                                            <p class="title-box-item">Tsaritsino</p>
+                                        </div>
+                                        <div class="send-card">
+                                            <div class="box-image-item">
+                                                <img src="./images/Çerkizovo.jpg" alt="">
+                                                <div class="red-animate-box">
+                                                    <button class="red-border-btn">Официальный веб сайт</button>
+                                                </div>
+                                            </div>
+                                            <p class="title-box-item">Çerkizova</p>
+                                        </div>
+                                        <div class="send-card ">
+                                            <div class="box-image-item">
+                                                <img src="./images/Remit.jpg" alt="">
+                                                <div class="red-animate-box">
+                                                    <button class="red-border-btn">Официальный веб сайт</button>
+                                                </div>
+                                            </div>
+                                            <p class="title-box-item">Ostankino</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="content-col">
+                    <div class="flex-parent-50">
+                        <div class="flex-col-50">
+                            <div style="width: 100%">
+                                <p class="half-text custom-size3 text-center " style="margin-bottom: 30px">
+                                    Наша главная цель – это удовлетворение запросов наших партнеров и клиентов. Будучи «Гурман Плюс» ООО мы привлекаем все наши возможности для удовлетворения потребностей наших покупателей. Наша основная цель заключается в том, чтобы предлагать пользователям качественную продукцию и тем самым расширить покупательскую аудиторию.
+                                </p>
+                                <div class="text-center ">
+                                    <button class="red-border-btn">Узнать больше</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-col-50 none-align">
+                            <div style="width: 100%">
+                                <p class="text-banner red">
+                                    Заботы
+                                </p>
+                                <p class="half-text text-dark">
+                                    Люди — основная ценность компании, а забота о людях — один из приоритетов компании в развитии
+                                </p>
+                                <div class="collective-image">
+                                    <img src="./images/ff.png" alt="">
+                                </div>
+                            </div>
+                            <img src="./images/gurman_6.png" alt="" class="figure-item opacity-figure bottom left">
+                        </div>
+                    </div>
+                </div>
+                <div class="content-col">
+                    <div class="row h-100">
+                        <div class="col-md-6 col-sm-7 col-xs-12 h-100">
+                            <div class="text-full-box-item">
+                                <p class="text-banner red">
+                                    Рядом
+                                </p>
+                                <p class="half-text gray">
+                                    <b> Контакты и вопросы </b>
+                                </p>
+                                <p class="half-text size-14 text-dark">
+                                    <b> Свяжитесь с нами - мы всегда 
+                                        рады обратной </b>
+                                </p>
+                                <p class="half-text gray">
+                                    <b> НАШ АДРЕС </b>
+                                </p>
+                                <p class="half-text size-14 text-dark">
+                                    <b> 
+                                         Азербвйджан, Город Баку, М.К.Ататюрк,
+                                         дом 39/69
+                                     </b>
+                                </p>
+                                <p class="half-text gray">
+                                    <b> ПОЗВОНИТЕ НАМ </b>
+                                </p>
+                                <div class="number-flex">
+
+                                    <p class="half-text size-14 text-dark">
+                                        <b> 
+                                      (+99412) 447-01-17
+                                    </b>
+                                    </p>
+                                    <p class="half-text size-14 text-dark">
+                                        <b> 
+                                      (+99412) 565-61-71
+                                    </b>
+                                    </p>
+                                    <p class="half-text size-14 text-dark">
+                                        <b> 
+                                        (+99412) 565-61-72
+                                    </b>
+                                    </p>
+                                    <p class="half-text size-14 text-dark">
+                                        <b> 
+                                    (+99412) 628-27-94
+                                    </b>
+                                    </p>
+                                </div>
+
+                                <p class="half-text gray">
+                                    <b> E-MAIL </b>
+                                </p>
+                                <p class="half-text size-14 text-dark">
+                                    <b> 
+                                       office@gurmanplyus.az
+                                    </b>
+                                </p>
+                                <p class="half-text size-14 text-dark">
+                                    <b> 
+                                    gurmanplyus@mail.ru
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-5 col-xs-12  h-100">
+                            <div class="flex-map">
+                                <div class="circle-map">
+                                    <div class="big-map">
+                                        <div class="border-map"></div>
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+<script src="./lib_js/jquery.js"></script>
+<script src="./lib_js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+<script>
+    window.onload = function() {
+        add_yandex();
+        callLoader();
+        if (window.outerWidth > 767) {
+            resizeSideContent();
+            resizeAndUpdateCanvas();
+        } else {}
+        createSlider();
+        sliderControl();
+    }
+    window.onresize = function() {
+        if (window.outerWidth > 767) {
+            positionArray = [];
+            resizeSideContent();
+            resizeAndUpdateCanvas();
+        } else {}
+        setTimeout(function(){
+            createSlider();
+        },1000);
+    }
+</script>
+
+</html>

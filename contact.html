@@ -1,0 +1,323 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo-gurman.png" sizes="16x16">
+    <link rel="stylesheet" href="./lib_css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="root.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <title>Gurman plyus</title>
+</head>
+
+<body>
+    <div class="comment-popup" data-position="1"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Оставьте отзыв</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="comment-popup" data-position="2"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Сотрудничество</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="toggle-menu">
+        <div class="content-menu">
+            <div class="flex-nav">
+                <ul class="menu-ul">
+                    <li><a href="about.html">О НАС </a></li>
+                    <li><a href="firial.html">ДИСТРИБУЦИЯ</a></li>
+                    <li><a href="partner.html">ПАРТНЕРЫ</a></li>
+                    <li><a href="product.html">НАШ РОДУКТ</a></li>
+                    <li><a href="missia.html">МИССИЯ И ПРИНЦИПЫ</a></li>
+                    <li><a href="galery.html">ФОТО ГАЛАРЕЯ</a></li>
+                    <li><span onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</span></li>
+                    <li><span onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</span></li>
+                    <li class="active"><a href="contact.html">КОНТАКТЫ</a></li>
+                </ul>
+                <ul class="menu-ul bottom-menu contact-menu">
+                    <li>
+                        <span>Phone</span>
+                        <span>(+99412) 447-01-17</span>
+                        <span>(+99412) 565-61-71</span>
+                        <span>(+99412) 565-61-72</span>
+                        <span>(+99412) 628-27-94</span>
+                    </li>
+                    <li>
+                        <a href="mailto:planerhobbi551@gmail.com">
+                            <span>Email</span>
+                            <span>planerhobbi551@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>Политика конфиденциальности</span>
+                        <p style="margin: 0;">© 2020 «GURMAN PLUSH» </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="white-bg">
+        </div>
+        <div class="right-close-box">
+        </div>
+        <div class="close-menu-icon">
+            <i class="fa fa-angle-left"></i>
+        </div>
+    </div>
+    <div class="box-button-right-acardion">
+        <button class="red-border-btn right-button-item one-btn">НАПИСАТЬ НАМ</button>
+        <button class="red-border-btn right-button-item two-btn" onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</button>
+        <button class="red-border-btn right-button-item three-btn" onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</button>
+    </div>
+    <div class="flex-section">
+        <div class="col-flex-1">
+            <div class="item-box">
+                <div class="logo-box flex-end-line">
+                    <a href="index.html">
+                        <img src="./images/logo-gurman.png" alt="">
+                    </a>
+                </div>
+                <div class="animate-menu pc flex-end-line">
+                    <div class="animate-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="language-btn">
+                <ul>
+                    <li class="active">
+                        <a href="#">AZ</a>
+                    </li>
+                    <li>
+                        <a href="#">TR</a>
+                    </li>
+                    <li>
+                        <a href="#">EN</a>
+                    </li>
+                    <li>
+                        <a href="#">RU</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="animate-menu mobile flex-end-line">
+                <div class="animate-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-flex-2">
+            <img src="./images/2.png" alt="" class="figure-item top right">
+            <div class="about-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p class="text-banner red">Контакты</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 mb-3">
+                        <b> <span class="half-text red" style="font-size: 14px;">Главная > </span>
+                            <span class="half-text gray" style="font-size: 14px;"> Контакты</span></b>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <p class="half-text text-dark fs-16">
+                            Свяжитесь с нами - мы всегда рады обратной связи!
+                        </p>
+                        <p class="half-text gray fs-16">
+                            НАШ АДРЕС
+                        </p>
+                        <p class="half-text text-dark fs-16">
+
+                            Азербвйджан, Город Баку, М.К.Ататюрк, дом 39/69
+
+                        </p>
+
+                        <p class="half-text gray fs-16">
+                            ПОЗВОНИТЕ НАМ
+                        </p>
+                        <p class="half-text text-dark fs-16">
+                            <span style="display: block">(+99412) 447-01-17</span>
+                            <span style="display: block">(+99412) 565-61-71</span>
+                            <span style="display: block">(+99412) 565-61-72</span>
+                            <span style="display: block">(+99412) 628-27-94</span>
+                        </p>
+                        <p class="half-text gray fs-16">
+                            E-MAIL
+                        </p>
+                        <p class="half-text text-dark fs-16">
+                            <span style="display: block">office@gurmanplyus.az</span>
+                            <span style="display: block">gurmanplyus@mail.ru</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div>
+                            <div class="circle-map contact-map">
+                                <div class="big-map">
+                                    <div class="border-map"></div>
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner">Форма обратной связи</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" onchange="changeText(event)" id="file-inp" hidden>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib_js/jquery.js"></script>
+<script src="./lib_js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+<script>
+    window.onload = function() {
+        add_yandex();
+    }
+</script>
+
+</html>

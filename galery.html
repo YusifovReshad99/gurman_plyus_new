@@ -1,0 +1,339 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo-gurman.png" sizes="16x16">
+    <link rel="stylesheet" href="./lib_css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="root.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <title>Gurman plyus</title>
+</head>
+
+<body>
+    <div class="comment-popup" data-position="1"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Оставьте отзыв</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="comment-popup" data-position="2"> 
+        <i class="fa fa-close comment-close" onclick="closePageePopup()"></i>
+        <div class="bg-ccc">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="text-banner text-dark contact-banner comment-popup-text">Сотрудничество</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Имя</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Телефон</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>E-mail</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="border-bottom-input">
+                                <label><b>Текст сообщение</b></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div class="flex-file-upload">
+                                <div class="btn-box">
+                                    <label class="circle-upload" for="file-inp"><i class="fa fa-cloud-upload "></i></label>
+                                </div>
+                                <div class="text-box">
+                                    <p class="file-upload-text">прикрепить файлы Docx, exсel, pdf, jpg, png</p>
+                                </div>
+                                <input type="file" class="hide-inp" onchange="changeText(event)" id="file-inp" hidden="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <button type="submit" class="red-border-btn active pl-10 pr-10">ОТПРАВИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="toggle-menu">
+        <div class="content-menu">
+            <div class="flex-nav">
+                <ul class="menu-ul">
+                    <li><a href="about.html">О НАС </a></li>
+                    <li><a href="firial.html">ДИСТРИБУЦИЯ</a></li>
+                    <li ><a href="partner.html">ПАРТНЕРЫ</a></li>
+                    <li><a href="product.html">НАШ РОДУКТ</a></li>
+                    <li><a href="missia.html">МИССИЯ И ПРИНЦИПЫ</a></li>
+                    <li class="active"><a href="galery.html">ФОТО ГАЛАРЕЯ</a></li>
+                    <li><span onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</span></li>
+                    <li><span onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</span></li>
+                    <li><a href="contact.html">КОНТАКТЫ</a></li>
+                </ul>
+                <ul class="menu-ul bottom-menu contact-menu">
+                    <li>
+                        <span>Phone</span>
+                        <span>(+99412) 447-01-17</span>
+                        <span>(+99412) 565-61-71</span>
+                        <span>(+99412) 565-61-72</span>
+                        <span>(+99412) 628-27-94</span>
+                    </li>
+                    <li>
+                        <a href="mailto:planerhobbi551@gmail.com">
+                            <span>Email</span>
+                            <span>planerhobbi551@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>Политика конфиденциальности</span>
+                        <p style="margin: 0;">© 2020 «GURMAN PLUSH» </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="white-bg">
+        </div>
+        <div class="right-close-box">
+        </div>
+        <div class="close-menu-icon">
+            <i class="fa fa-angle-left"></i>
+        </div>
+    </div>
+    <div class="box-button-right-acardion">
+        <button class="red-border-btn right-button-item one-btn">НАПИСАТЬ НАМ</button>
+        <button class="red-border-btn right-button-item two-btn" onclick="openPagePopup(1)">ОСТАВЬТЕ ОТЗЫВ</button>
+        <button class="red-border-btn right-button-item three-btn" onclick="openPagePopup(2)">СОТРУДНИЧЕСТВО</button>
+    </div>
+    <div class="flex-section">
+        <div class="col-flex-1">
+            <div class="item-box">
+                <div class="logo-box flex-end-line">
+                    <a href="index.html">
+                        <img src="./images/logo-gurman.png" alt="">
+                    </a>
+                </div>
+                <div class="animate-menu pc flex-end-line">
+                    <div class="animate-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="language-btn">
+                <ul>
+                    <li class="active">
+                        <a href="#">AZ</a>
+                    </li>
+                    <li>
+                        <a href="#">TR</a>
+                    </li>
+                    <li>
+                        <a href="#">EN</a>
+                    </li>
+                    <li>
+                        <a href="#">RU</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="animate-menu mobile flex-end-line">
+                <div class="animate-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-flex-2">
+            <img src="./images/2.png" alt="" class="figure-item top right">
+            <div class="about-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p class="text-banner red">Фотогалерея</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <b>  <span class="half-text red" style="font-size: 14px;">Главная > </span>
+                            <span class="half-text gray" style="font-size: 14px;"> Фотогалерея</span></b>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="flex-button-box">
+                            <a href="about.html">
+                                <button class="red-border-btn ">О нас </button>
+                            </a>
+                            <a href="firial.html">
+                                <button class="red-border-btn ">Дистрибуция </button>
+                            </a>
+                            <a href="partner.html">
+                                <button class="red-border-btn">Партнеры </button>
+                            </a>
+                            <a href="product.html">
+                                <button class="red-border-btn">Наш продукт </button>
+                            </a>
+                            <a href="missia.html">
+                                <button class="red-border-btn">Миссия, принципы и дипломы </button>
+                            </a>
+                            <a href="galery.html">
+                                <button class="red-border-btn active">Фото галерея</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 margin-bottom-1">
+                        <p class="text-banner text-dark contact-banner">Фотогалерея</p>
+                    </div>
+                </div>
+                <div class="row  margin-bottom-1 box-fig">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery1.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(1)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery2.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(2)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery3.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(3)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery4.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(4)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery5.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(5)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="flex-item-galery">
+                            <img src="./images/galery6.jpg" alt="">
+                            <div class="circle-plus" onclick="openPopup(6)">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="custom-popup">
+        <div class="bg-custom"></div>
+        <div class="custom-content">
+            <div class="count-image">
+                <div class="count-box">
+                    <span class="dynamiCount">1</span>
+                    <span>/</span>
+                    <span>6</span>
+                </div>
+                <i class="fa fa-close" onclick="closePopup()"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fa fa-angle-left left" onclick="prevSlider()"></i>
+                <i class="fa fa-angle-right rigth" onclick="nextSlider()"></i>
+            </div>
+            <div class="box-slider">
+                <img src="./images/galery1.jpg" data-id="1" alt="">
+                <img src="./images/galery2.jpg" data-id="2" alt="">
+                <img src="./images/galery3.jpg" data-id="3" alt="">
+                <img src="./images/galery4.jpg" data-id="4" alt="">
+                <img src="./images/galery5.jpg" data-id="5" alt="">
+                <img src="./images/galery6.jpg" data-id="6" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib_js/jquery.js"></script>
+<script src="./lib_js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+<script>
+    window.onload = function() {
+        add_yandex();
+    }
+</script>
+
+</html>
